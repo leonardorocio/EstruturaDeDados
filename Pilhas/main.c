@@ -4,6 +4,13 @@
 #include <time.h>
 #include "Pilha.h"
 
+void teste() {
+	if (1 == 1)
+		return;
+		
+	printf("OPA");
+}
+
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
@@ -23,8 +30,18 @@ int main(int argc, char *argv[]) {
 	//	printf("%s", str);
 	
 	// Exercicio 04
-	int teste = eh_palindrome("teste");
-	printf("%s", teste ? "Palidromo": "Não Palindromo");
+	//	int teste = eh_palindrome("teste");
+	//	printf("%s", teste ? "Palidromo": "Não Palindromo");
+	
+	// Exercicio 05
+	//	inverte_frase("AMU MEGASNEM ATERCES");
+
+	// Exercicio 06
+	//	int teste = valida_expressao("((((((()))))))");
+	//	printf("%d", teste);
+
+	// Exercicio 07
+
 
 	return 0;
 }

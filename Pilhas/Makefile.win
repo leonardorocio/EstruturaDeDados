@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o Pilha.o exercicio01.o exercicio03.o exercicio02.o exercicio04.o
-LINKOBJ  = main.o Pilha.o exercicio01.o exercicio03.o exercicio02.o exercicio04.o
+OBJ      = exercicio01.o exercicio02.o exercicio03.o exercicio04.o main.o Pilha.o exercicio05.o exercicio06.o pilha_dupla.o
+LINKOBJ  = exercicio01.o exercicio02.o exercicio03.o exercicio04.o main.o Pilha.o exercicio05.o exercicio06.o pilha_dupla.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -24,20 +24,29 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
 
+exercicio01.o: exercicio01.c
+	$(CC) -c exercicio01.c -o exercicio01.o $(CFLAGS)
+
+exercicio02.o: exercicio02.c
+	$(CC) -c exercicio02.c -o exercicio02.o $(CFLAGS)
+
+exercicio03.o: exercicio03.c
+	$(CC) -c exercicio03.c -o exercicio03.o $(CFLAGS)
+
+exercicio04.o: exercicio04.c
+	$(CC) -c exercicio04.c -o exercicio04.o $(CFLAGS)
+
 main.o: main.c
 	$(CC) -c main.c -o main.o $(CFLAGS)
 
 Pilha.o: Pilha.c
 	$(CC) -c Pilha.c -o Pilha.o $(CFLAGS)
 
-exercicio01.o: exercicio01.c
-	$(CC) -c exercicio01.c -o exercicio01.o $(CFLAGS)
+exercicio05.o: exercicio05.c
+	$(CC) -c exercicio05.c -o exercicio05.o $(CFLAGS)
 
-exercicio03.o: exercicio03.c
-	$(CC) -c exercicio03.c -o exercicio03.o $(CFLAGS)
+exercicio06.o: exercicio06.c
+	$(CC) -c exercicio06.c -o exercicio06.o $(CFLAGS)
 
-exercicio02.o: exercicio02.c
-	$(CC) -c exercicio02.c -o exercicio02.o $(CFLAGS)
-
-exercicio04.o: exercicio04.c
-	$(CC) -c exercicio04.c -o exercicio04.o $(CFLAGS)
+pilha_dupla.o: pilha_dupla.c
+	$(CC) -c pilha_dupla.c -o pilha_dupla.o $(CFLAGS)
