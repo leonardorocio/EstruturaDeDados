@@ -49,7 +49,7 @@ void mostra_pilha( Pilha p ){
 		printf("Dados da Pilha:\n");
 		int i;
 		for( i = 0 ; i <= p.topo ; i++ )
-			printf("[%d] %d\n", i, p.dados[i] );
+			printf("[%d] %d\n", p.topo - i, p.dados[i] );
 	}
 	printf("---------------\n");
 }

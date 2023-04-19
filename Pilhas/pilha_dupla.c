@@ -34,7 +34,7 @@ int empilha1(PilhaDupla *p, int valor) {
 	}
 	
 	p->topo1++;
-	p->dados[topo1] = valor;
+	p->dados[p->topo1] = valor;
 	return 1;
 }
 
@@ -44,7 +44,7 @@ int empilha2(PilhaDupla *p, int valor) {
 	}
 	
 	p->topo2--;
-	p->dados[topo2] = valor;
+	p->dados[p->topo2] = valor;
 	return 1;
 }
 
@@ -63,7 +63,7 @@ int desempilha2(PilhaDupla *p, int *valor) {
 		return 0;
 	}
 	
-	*valor = p->dados[p->topo2]
+	*valor = p->dados[p->topo2];
 	p->topo2++;
 	return 1;
 }

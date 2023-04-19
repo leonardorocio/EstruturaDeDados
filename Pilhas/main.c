@@ -42,6 +42,15 @@ int main(int argc, char *argv[]) {
 
 	// Exercicio 07
 
+	// Trabalho Pilhas
+	
+	printf("Digite uma expressao numerica (sem espacos): \n");
+	char *entrada = malloc(sizeof(char) * 255);
+	scanf("%[^\n]", entrada);
+//	converte_expressao("(5+9)*2+6*5");
+//	converte_expressao("(5+9)*((2+6)*5)");
+//	
+	converte_expressao(entrada);
 
 	return 0;
 }

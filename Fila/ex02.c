@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-
 typedef struct {
 	int *dados;
 	int ini, fim;
@@ -12,7 +10,7 @@ typedef struct {
 void inicializa_filar(FilaRuim *f, int size) {
 	f->dados = malloc(sizeof(int) * size);
 	f->ini = 0;
-	f->fim = -1;
+	f->fim = 0;
 	f->capacidade = size;
 }
 
@@ -24,6 +22,7 @@ void reorganiza_array(int *dados, int fim) {
 	int i;
 	for (i = 0; i < fim - 1; i++) {
 		dados[i] = dados[i+1];
+		printf("%d e %d\n", dados[i], dados[i+1]);
 	}
 }
 
@@ -46,7 +45,6 @@ int remover_ruim(FilaRuim *p, int *info){
 		return -2;
 	
 	*info = p->dados[p->ini];
-	p->ini = ( p->ini + 1 ) % p->capacidade;
 	reorganiza_array(p->dados, p->fim);
 	p->fim--;
 	
