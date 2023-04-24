@@ -45,11 +45,10 @@ int executa_operacao(int n1, int n2, char c) {
 		case '+':
 			return n1 + n2;
 		case '-':
-			return n1 - n2;
+			return n2 - n1;
 		case '*':
 			return n1 * n2;
 		case '/':
-			printf("%d= %d/%d\n", n2 / n1, n2, n1);
 			return n2 / n1;
 	}
 }
