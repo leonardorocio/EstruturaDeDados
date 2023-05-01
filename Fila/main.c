@@ -109,6 +109,12 @@ int main(int argc, char *argv[]) {
 	inserir_inicio(&d, 7);
 	mostra_deque(d);
 	
+	remover_fim(&d, &x);
+	mostra_deque(d);
+	
+	remover_inicio(&d, &x);
+	mostra_deque(d);
+	
 	
 	return 0;
 }

@@ -54,8 +54,9 @@ int remover_fim(Deque *d, int *v) {
 	if( deque_vazio( *d ) )
 		return ERRO_FILA_VAZIA;
 	
-	*v = d->dados[d->n];
-	d->n = (d->capacidade + d->n - 1) % d->capacidade;
+	int fim = (d->inicio + d->n - 1) % d->capacidade;
+	*v = d->dados[fim];
+	d->n--; 
 	return 1;
 }
 

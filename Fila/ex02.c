@@ -34,7 +34,7 @@ int inserir_ruim(FilaRuim *f, int v) {
 	if (filar_cheia(*f))
 		return -1;
 		
-	int final = (f->ini + f->fim) % f->capacidade;
+	int final = (f->fim) % f->capacidade;
 	f->dados[final] = v;
 	f->fim++;
 	return 1;

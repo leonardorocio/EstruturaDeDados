@@ -15,8 +15,8 @@ void teste() {
 
 int main(int argc, char *argv[]) {
 	srand(time(0));
-	// Exercicio 01
-	//	inteiro_pra_binario(13);
+//	 Exercicio 01
+//		inteiro_pra_binario(13);
 	
 	// Exercicio 02
 	//	Pilha p1, p2;
@@ -33,8 +33,8 @@ int main(int argc, char *argv[]) {
 	//	int teste = eh_palindrome("teste");
 	//	printf("%s", teste ? "Palidromo": "Não Palindromo");
 	
-	// Exercicio 05
-	//	inverte_frase("AMU MEGASNEM ATERCES");
+//	 Exercicio 05
+//		inverte_frase("AMU MEGASNEM ATERCES");
 
 	// Exercicio 06
 	//	int teste = valida_expressao("((((((()))))))");

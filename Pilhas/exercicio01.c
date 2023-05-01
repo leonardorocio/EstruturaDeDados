@@ -5,11 +5,11 @@
 void inteiro_pra_binario(int numero) {
 	Pilha p;
 	inicializa_pilha(&p, 32);
-	do {
+	while (numero > 0) {
 		int resto = numero % 2;
 		empilha(&p, resto);
 		numero /= 2;
-	} while (numero > 0);
+	}
 	
 	int aux;
 	while( !(pilha_vazia(p))) {
