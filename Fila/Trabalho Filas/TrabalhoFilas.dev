@@ -29,7 +29,7 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=00000000e0000000000000000
-UnitCount=3
+UnitCount=6
 
 [VersionInfo]
 Major=1
@@ -61,7 +61,16 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit2]
-FileName=bfs.c
+FileName=matriz.txt
+Folder=
+Compile=0
+Link=0
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit3]
+FileName=Fila.c
 CompileCpp=0
 Folder=
 Compile=1
@@ -70,8 +79,29 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit3]
-FileName=matriz.txt
+[Unit4]
+FileName=Fila.h
+CompileCpp=0
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit5]
+FileName=Pilha.c
+CompileCpp=0
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit6]
+FileName=Pilha.h
+CompileCpp=0
 Folder=
 Compile=1
 Link=1

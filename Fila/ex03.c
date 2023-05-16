@@ -9,7 +9,7 @@ typedef struct {
 void mostra_fila_pilha(FilaPilha fp) {
 	int i;
 	if (!pilha_vazia(fp.p2)) {
-		printf("Dados da Fila:\n");
+		printf("Dados da Fila (P2):\n");
 		for (i = fp.p2.topo; i >= 0; i--) {
 			printf("[%d]: %d\n", fp.p2.topo - i, fp.p2.dados[i]);
 		}
@@ -18,7 +18,7 @@ void mostra_fila_pilha(FilaPilha fp) {
 		if( pilha_vazia( fp.p1 ) )
 			printf("Fila vazia!\n");
 		else {
-			printf("Dados da Fila:\n");
+			printf("Dados da Fila (P1):\n");
 			int i;
 			for( i = 0 ; i <= fp.p1.topo ; i++ )
 				printf("[%d] %d\n", i, fp.p1.dados[i] );
@@ -66,7 +66,7 @@ void inicializa_fila_pilha(FilaPilha *fp, int size) {
 }
 
 int fila_pilha_vazia(FilaPilha fp) {
-	return fp.p2.topo == -1;
+	return pilha_vazia(fp.p1) && pilha_vazia(fp.p2);
 }
 
 int fila_pilha_cheia(FilaPilha fp) {
