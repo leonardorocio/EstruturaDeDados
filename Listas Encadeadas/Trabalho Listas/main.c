@@ -3,6 +3,8 @@
 #include <locale.h>
 #include "DisjointSet.h"
 
+// Nomes: Leonardo Fagundes Rócio e Mateus Alayo Hidalgo Schulz
+
 void componentes_conexos(int size, int mat[size][size]) {
 	DisjointSet s;
 	inicializa_set(&s);
