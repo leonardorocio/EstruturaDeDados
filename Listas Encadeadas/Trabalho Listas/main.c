@@ -21,6 +21,7 @@ void componentes_conexos(int size, int mat[size][size]) {
 		}
 	}
 	mostra_todos_sets(s);
+	desaloca_set(&s);
 }
 
 int main(int argc, char *argv[]) {	
@@ -37,6 +38,7 @@ int main(int argc, char *argv[]) {
 			}
 		}
 		componentes_conexos(size, m);
+		system("PAUSE");
 	}
 	fclose(entrada);
 	return 0;

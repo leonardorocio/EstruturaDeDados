@@ -27,14 +27,16 @@ int main(int argc, char *argv[]) {
 	x = 30;
 	insere_inicio(&l1, &x);
 	insere_inicio(&l2, &x);
+
+//	mostra_lista(l1, mostra_inteiro);
 	
 //	x = 10;
 //	insere_inicio(&l1, &x);
 //	insere_inicio(&l2, &x);
 	
 //	mostra_lista(l1, mostra_inteiro);
-//	mostra_invertido_recursivo(l1, mostra_inteiro);
- 	mostra_invertido_com_pilha(l1, mostra_inteiro);
+	mostra_invertido_recursivo(l1, mostra_inteiro);
+// 	mostra_invertido_com_pilha(l1, mostra_inteiro);
 //	mostra_invertido_iterativo(l1, mostra_inteiro);
 
 //	Lista b1 = busca_todos(&l1, &x, compara);
@@ -122,15 +124,28 @@ Lista busca_todos(Lista *l, void *info, int (*compara) (void*, void*)) {
 }
 
 void mostra_invertido_recursivo(Lista l, void (*mostra) (void*)) {
-	if (l.cabeca == NULL) {
-		printf("Lista invertida:\n");
-	} else {
+	if (l.cabeca != NULL) {
 		void *val = l.cabeca->info;
 		l.cabeca = l.cabeca->proximo;
 		mostra_invertido_recursivo(l, mostra_inteiro);
 		mostra_inteiro(val);
 	}
 }
+
+//void inverte_lista(Lista *l, Elemento *ant) {
+//	if (l->cabeca != NULL) {
+//		Elemento *aux = l->cabeca;
+//		l->cabeca = l->cabeca->proximo;
+////		printf("OK");
+//		inverte_lista(l, aux);
+//		mostra_lista(*l, mostra_inteiro);
+//		system("PAUSE");
+////		printf("OK");
+//		l->cabeca->proximo = aux;
+//	} else {
+//		l->cabeca = ant;
+//	}
+//}
 
 void mostra_invertido_com_pilha(Lista l, void (*mostra) (void*)) {
 	Pilha p;
